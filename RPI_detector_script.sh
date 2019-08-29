@@ -10,3 +10,15 @@ mapfile -t mac_addresses < <(grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2
 RPI_index=()
 count=0
 RPI_MAC='b8:27:eb'
+
+for i in "${mac_addresses[@]}"
+  do
+    :
+    #echo $count
+    if [[ $i =~ "b8:27:eb" ]];
+    then
+      RPI_index+=($count)
+      #echo $count
+    fi
+    count=$((count+1))
+done
