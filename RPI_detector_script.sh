@@ -6,3 +6,7 @@ mac_addr=$(grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'<<<"$stream_raw"
 
 mapfile -t ip_addresses < <(grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'<<<"$stream_raw")
 mapfile -t mac_addresses < <(grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'<<<"$stream_raw")
+
+RPI_index=()
+count=0
+RPI_MAC='b8:27:eb'
