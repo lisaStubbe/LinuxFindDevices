@@ -6,3 +6,4 @@
 #ip_addresses = ()
 #ip_addresses = (1 2)
 stream_raw=$(tcpdump -nn -c5 -i wlan0 -e)
+#echo $stream_raw
