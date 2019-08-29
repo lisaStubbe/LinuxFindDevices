@@ -5,3 +5,4 @@
 #ip_addr=$(grep -o -E 'IP [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'<<<"IP 192.168.0.116.50834 > 216.58.208.110.443: Flags [P.], seq 956069419:956070009, ack 2456084586, win 3097, options [nop,nop,TS val 1621283006 ecr 2243252515], length 590")
 #ip_addresses = ()
 #ip_addresses = (1 2)
+stream_raw=$(tcpdump -nn -c5 -i wlan0 -e)
